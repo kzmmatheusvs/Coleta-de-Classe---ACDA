@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coleta de Classe - ACDA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>COLETA DE CLASSE - ATIVIDADES CURRICULARES DESPORTIVAS E ARTÍSTICAS (ACDA)</h1>
+        <form id="classeForm">
+            <div class="form-row">
+                <label for="tipoEnsino">1- Tipo de Ensino:</label>
+                <select id="tipoEnsino">
+                    <option value="ATIVIDADES CURRICULARES DESPORTIVAS E ARTÍSTICAS (ACDA)">ATIVIDADES CURRICULARES DESPORTIVAS E ARTÍSTICAS (ACDA)</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="serie">2- Série:</label>
+                <input type="text" id="serie">
+            </div>
+            <div class="form-row">
+                <label for="turma">3- Turma:</label>
+                <input type="text" id="turma">
+            </div>
+            <div class="form-row">
+                <label for="turno">4- Turno:</label>
+                <select id="turno">
+                    <option value="">Selecione</option>
+                    <option value="Manhã">Manhã</option>
+                    <option value="Tarde">Tarde</option>
+                    <option value="Noite">Noite</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>5- Horário da Aula:</label>
+                <table id="horarioAula">
+                    <thead>
+                        <tr>
+                            <th>Aula</th>
+                            <th>Dias</th>
+                            <th>Horário Início</th>
+                            <th>Horário Término</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1ª</td>
+                            <td><select class="diaSemana"><option value="">Selecione</option><option value="Segunda">Segunda</option><option value="Terça">Terça</option><option value="Quarta">Quarta</option><option value="Quinta">Quinta</option><option value="Sexta">Sexta</option></select></td>
+                            <td><select class="horaInicio"><option value="">Selecione</option></select>:<select class="minutoInicio"><option value="">Selecione</option></select></td>
+                            <td><select class="horaTermino"><option value="">Selecione</option></select>:<select class="minutoTermino"><option value="">Selecione</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>2ª</td>
+                            <td><select class="diaSemana"><option value="">Selecione</option><option value="Segunda">Segunda</option><option value="Terça">Terça</option><option value="Quarta">Quarta</option><option value="Quinta">Quinta</option><option value="Sexta">Sexta</option></select></td>
+                            <td><select class="horaInicio"><option value="">Selecione</option></select>:<select class="minutoInicio"><option value="">Selecione</option></select></td>
+                            <td><select class="horaTermino"><option value="">Selecione</option></select>:<select class="minutoTermino"><option value="">Selecione</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>3ª</td>
+                            <td><select class="diaSemana"><option value="">Selecione</option><option value="Segunda">Segunda</option><option value="Terça">Terça</option><option value="Quarta">Quarta</option><option value="Quinta">Quinta</option><option value="Sexta">Sexta</option></select></td>
+                            <td><select class="horaInicio"><option value="">Selecione</option></select>:<select class="minutoInicio"><option value="">Selecione</option></select></td>
+                            <td><select class="horaTermino"><option value="">Selecione</option></select>:<select class="minutoTermino"><option value="">Selecione</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>4ª</td>
+                            <td><select class="diaSemana"><option value="">Selecione</option><option value="Segunda">Segunda</option><option value="Terça">Terça</option><option value="Quarta">Quarta</option><option value="Quinta">Quinta</option><option value="Sexta">Sexta</option></select></td>
+                            <td><select class="horaInicio"><option value="">Selecione</option></select>:<select class="minutoInicio"><option value="">Selecione</option></select></td>
+                            <td><select class="horaTermino"><option value="">Selecione</option></select>:<select class="minutoTermino"><option value="">Selecione</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>5ª</td>
+                            <td><select class="diaSemana"><option value="">Selecione</option><option value="Segunda">Segunda</option><option value="Terça">Terça</option><option value="Quarta">Quarta</option><option value="Quinta">Quinta</option><option value="Sexta">Sexta</option></select></td>
+                            <td><select class="horaInicio"><option value="">Selecione</option></select>:<select class="minutoInicio"><option value="">Selecione</option></select></td>
+                            <td><select class="horaTermino"><option value="">Selecione</option></select>:<select class="minutoTermino"><option value="">Selecione</option></select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-row">
+                <label for="tipoClasse">6- Tipo de Classe:</label>
+                <select id="tipoClasse">
+                    <option value="">Selecione</option>
+                    <option value="Inova">Inova</option>
+                    <option value="Alto rendimento Esportivo">Alto rendimento Esportivo</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="dataInicio">7- Data Início:</label>
+                <input type="date" id="dataInicio">
+            </div>
+            <div class="form-row">
+                <label>8- Categoria:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="categoriaInfantil" name="categoria" value="Infantil">
+                        <label for="categoriaInfantil">Infantil</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="categoriaJuvenil" name="categoria" value="Juvenil">
+                        <label for="categoriaJuvenil">Juvenil</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="categoriaMirim" name="categoria" value="Mirim">
+                        <label for="categoriaMirim">Mirim</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="categoriaPreMirim" name="categoria" value="Pré-Mirim">
+                        <label for="categoriaPreMirim">Pré-Mirim</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="modalidade">9- Modalidade:</label>
+                <select id="modalidade" name="modalidade">
+                    <option value="">Selecione</option>
+                    <option value="ATLETISMO">ATLETISMO</option>
+                    <option value="BADMINGTON">BADMINGTON</option>
+                    <option value="BALLET">BALLET</option>
+                    <option value="BANDA">BANDA</option>
+                    <option value="BASQUETEBOL">BASQUETEBOL</option>
+                    <option value="BOXE">BOXE</option>
+                    <option value="CANTO">CANTO</option>
+                    <option value="CAPOEIRA">CAPOEIRA</option>
+                    <option value="CICLISMO">CICLISMO</option>
+                    <option value="CINEMA">CINEMA</option>
+                    <option value="DAMAS">DAMAS</option>
+                    <option value="DANÇA CLASSICA">DANÇA CLASSICA</option>
+                    <option value="DANÇA ESTRANGEIRA">DANÇA ESTRANGEIRA</option>
+                    <option value="DANÇAS BRASILEIRAS">DANÇAS BRASILEIRAS</option>
+                    <option value="DANÇAS CONTEMPORÂNEAS">DANÇAS CONTEMPORÂNEAS</option>
+                    <option value="DANÇAS DE SALÃO">DANÇAS DE SALÃO</option>
+                    <option value="DANÇAS TRADICIONAIS">DANÇAS TRADICIONAIS</option>
+                    <option value="DANÇAS URBANAS">DANÇAS URBANAS</option>
+                    <option value="DESENHO">DESENHO</option>
+                    <option value="ESCULTURA">ESCULTURA</option>
+                    <option value="FANFARRA">FANFARRA</option>
+                    <option value="FOTOGRAFIA">FOTOGRAFIA</option>
+                    <option value="FUTSAL">FUTSAL</option>
+                    <option value="GINASTICA ARTISTICA">GINASTICA ARTISTICA</option>
+                    <option value="GINÁSTICA DE CONDICIONAMENTO FÍSICO">GINÁSTICA DE CONDICIONAMENTO FÍSICO</option>
+                    <option value="GINÁSTICA DE CONSCIENTIZAÇÃO CORPORAL">GINÁSTICA DE CONSCIENTIZAÇÃO CORPORAL</option>
+                    <option value="GINASTICA GERAL">GINASTICA GERAL</option>
+                    <option value="GINASTICA RITMICA">GINASTICA RITMICA</option>
+                    <option value="HANDEBOL">HANDEBOL</option>
+                    <option value="INSTRUMENTOS">INSTRUMENTOS</option>
+                    <option value="JUDO">JUDO</option>
+                    <option value="KARATE">KARATE</option>
+                    <option value="KUNG FU">KUNG FU</option>
+                    <option value="NATACAO">NATACAO</option>
+                    <option value="PERCUSSÃO CORPORAL">PERCUSSÃO CORPORAL</option>
+                    <option value="PINTURA">PINTURA</option>
+                    <option value="RUGBY">RUGBY</option>
+                    <option value="TAEKWONDO">TAEKWONDO</option>
+                    <option value="TCHOUKBALL">TCHOUKBALL</option>
+                    <option value="TEATRO">TEATRO</option>
+                    <option value="TÊNIS">TÊNIS</option>
+                    <option value="TENIS DE MESA">TENIS DE MESA</option>
+                    <option value="VOLEI DE PRAIA">VOLEI DE PRAIA</option>
+                    <option value="VOLEIBOL">VOLEIBOL</option>
+                    <option value="XADREZ">XADREZ</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="genero">10- Gênero:</label>
+                <select id="genero" name="genero">
+                    <option value="">Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Mista">Mista</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="numeroSala">11- Número da Sala:</label>
+                <input type="text" id="numeroSala" maxlength="9">
+            </div>
+            <div class="form-row">
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes"></textarea>
+            </div>
+            <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        <div class="footer-bottom">
+            <p>Desenvolvido pela equipe CIE Franca</p>
+        </div>
+    </footer>  
+</body>
+</html>

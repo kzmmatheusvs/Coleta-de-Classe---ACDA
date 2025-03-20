@@ -1,0 +1,237 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #E6F1FB; /* Azul claro */
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #1A4C7A;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E6F1FB;
+}
+/* Layout dos campos de formulário */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.form-row:last-child {
+    border-bottom: none;
+}
+.form-row label {
+    font-weight: bold;
+    color: #1A4C7A;
+    margin-bottom: 4px;
+}
+.form-row input, 
+.form-row select, 
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #F9F9F9;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+.form-row input:focus, 
+.form-row select:focus, 
+.form-row textarea:focus {
+    border-color: #1A4C7A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 76, 122, 0.5);
+}
+/* Estilo específico para selects */
+#modalidade, #genero {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #F9F9F9;
+    transition: all 0.3s ease;
+}
+#modalidade:focus, #genero:focus {
+    border-color: #1A4C7A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 76, 122, 0.5);
+}
+/* Estilo para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+table th {
+    background: #1A4C7A;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+table td select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+table tr:nth-child(even) {
+    background: #F1F9FF;
+}
+/* Botões */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1A4C7A;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-top: 20px;
+}
+button:hover {
+    background: #155A8A;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(0);
+}
+/* Ajustes na exibição dos checkboxes */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 20px;
+    padding: 10px 0;
+}
+/* Estilos para grupos de checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+}
+.checkbox-container input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.checkbox-container label {
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* Estilização específica para as novas seções */
+#dataInicio {
+    max-width: 200px;
+}
+#numeroSala {
+    max-width: 200px;
+}
+textarea#observacoes {
+    min-height: 100px;
+    resize: vertical;
+}
+/* Responsividade */
+@media (max-width: 900px) {
+    .checkbox-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 10px;
+    }
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .form-row input, 
+    .form-row select, 
+    .form-row textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Estilo para o footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+.footer-bottom {
+    padding: 10px;
+    background-color: #1A4C7A;
+    color: white;
+    border-radius: 6px;
+}
+
+/* Estilos para selects de horário */
+.horaInicio, .minutoInicio, .horaTermino, .minutoTermino {
+    width: auto !important;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+/* Ajuste para tabela de horários */
+#horarioAula td {
+    text-align: center;
+}
+#horarioAula select {
+    min-width: 80px;
+}
